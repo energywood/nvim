@@ -3,6 +3,12 @@ vim.keymap.set("n", "<Space>", "<Nop>", { silent = true })
 vim.g.mapleader = " "
 
 
+-- always draw sign column. prevents buffer moving when adding/deleting sign
+vim.opt.signcolumn = 'yes'
+
+-- keep more context on screen while scrolling
+vim.opt.scrolloff = 2
+
 -- sweet sweet relative line numbers
 vim.opt.relativenumber = true
 -- and show the absolute line number for the current line
