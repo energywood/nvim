@@ -51,6 +51,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  { 
+     "ellisonleao/gruvbox.nvim",
+     lazy = false,
+     priority = 1000,
+     config = function()
+	vim.o.background = 'dark'
+	vim.cmd([[colorscheme gruvbox]])
+     end
+  },
   -- auto-cd to root of git project
   -- 'airblade/vim-rooter'
   {
